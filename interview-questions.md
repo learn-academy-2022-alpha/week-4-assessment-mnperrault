@@ -15,9 +15,9 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 2. What is a DOM event?
 
-  Your answer: The DOM stands for Document Object Model, it is the aspect thats always listening for changes. As a user moves their mouse across the screen, the DOM reacts by changing the view to represent the cursor's position. As developers, we want our web applications to recognize these interactions and respond accordingly depending on the type of event.
+  Your answer: The DOM stands for Document Object Model, it is the aspect thats always listening for changes. As a user moves their mouse across the ßcreen, the DOM reacts by changing the view to represent the cursor's position. As developers, we want our web applications to recognize these interactions and respond accordingly depending on the type of event.
 
-  Researched answer:DOM stands for Document Object Model. DOM Events are a signal that something has occurred, or is occurring, and can be triggered by user interactions or by the browser. Client-side scripting languages like JavaScript, JScript, ECMAScript, VBScript, and Java register various event handlers or listeners on the elements.
+  Researched answer: DOM stands for Document Object Model. DOM Events are a signal that something has occurred, or is occurring, and can be triggered by user interactions or by the browser. Client-side scripting languages like JavaScript, JScript, ECMAScript, VBScript, and Java register various event handlers or listeners on the elements.
 
 
 
@@ -31,9 +31,9 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 4. What is the difference between a Float and an Integer in Ruby?
 
-  Your answer: The difference between a Float and an Integer in Ruby is that a float is a number that contains a decimal point while any number written without decimals is considered an integer. 
+  Your answer: The difference between a Float and an Integer in Ruby is that a float is a number that contains a decimal point while any number written without decimals is considered an integer.
 
-  Researched answer:Integers and floats are two different kinds of numerical data. An integer (more commonly called an int) is a number without a decimal point. A float is a floating-point number, which means it has a decimal place. Floats are used when more precision is needed.
+  Researched answer: Integers and floats are two different kinds of numbers data. An integer (more commonly called an int) is a number without a decimal point. A float is a floating-point number, which means it has a decimal place. Floats are used when more precision is needed.
 
 
 

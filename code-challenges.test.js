@@ -15,7 +15,7 @@
 
 // a) Create a test with an expect statement using the variable provided. HINT: Check out this resource: https://jestjs.io/docs/expect#expectarraycontainingarray
 
-describe('removeThenShuffle', () => {
+describe('shuffle', () => {
   it("takes in an array, removes the first item from the array and shuffles the remaining content", () => {
     const colors1 = ["purple", "blue", "green", "yellow", "pink"]
     // Expected output example (can be a different order): ["yellow", "blue", "pink", "green"]
@@ -25,22 +25,22 @@ describe('removeThenShuffle', () => {
     expect(shuffle(colors1)).not.toEqual(expect.arrayContaining(["purple"]))
     expect(shuffle(colors2)).toEqual(expect.arrayContaining(["saffron", "aquamarine", "periwinkle", "indigo", "ochre"]))
     expect(shuffle(colors2)).not.toEqual(expect.arrayContaining(["chartreuse"]))
-  })
+  })    
 })
 
-ReferenceError: removeThenShuffle is not defined
+// ReferenceError: shuffle is not defined
 
 
 // b) Create the function that makes the test pass.
 
 // Pseudo Code:
-// Create a function named removeThenShuffle
+// Create a function named shuffle
 // Create a method that removes the first element of the array which will be .shift()
 // The method will shuffle the remaining items in the arrays
-// A for loop will not work in this case so I will use a while loop
+// A for loop will not work in this case so I'll use a while loop
 // The new array is returned
 
-const shuffle = (array) => {
+const rshuffle = (array) => {
   array.shift()
   var n = array.length
   let newArr = []
@@ -50,7 +50,7 @@ const shuffle = (array) => {
     return newArr.flat(1)
 }
 
-// Got Green.
+// Got Green test passed.
 
 
 
@@ -64,43 +64,37 @@ const nums1 = [3, 56, 90, -8, 0, 23, 6]
 const nums2 = [109, 5, 9, 67, 8, 24]
 // Expected output: [5, 109]
 
-//Psuedocode:
-// Create a function that takes in an array
-// const nums1 = [3, 56, 90, -8, 0, 23, 6]
-// create a local variable that maps through each number of the array and sorts the maximum and minimum numbers in the array
 
+describe("minMax", () => {
+  it("takes an array of numbers and returns an array of the minimum and maximum numbers in that order", () => {
+    const nums1 = [3, 56, 90, -8, 0, 23, 6]
+    // Expected output: [-8, 90]
+    const nums2 = [109, 5, 9, 67, 8, 24]
+    // Expected output: [5, 109]
+    expect(minMax(nums1)).toEqual([-8, 90])
+    expect(minMax(nums2)).toEqual([5, 109])
+  })
+})
 
-function getMinMax(arr){
-    let maximum = Math.max(...arr);
-    let minimum = Math.min(...arr);
-   let result =  ([maximum, minimum]); 
-    return result;
-  };
-  
-  getMinMax('3, 56, 90, -8, 0, 23, 6')
+//Got Red.
+//ReferenceError: minMax is not defined
 
-//Psuedocode:
-// Create a function that takes in an array
-// const nums2 = [109, 5, 9, 67, 8, 24]
-// create a local variable that maps through each number of the array and sorts the maximum and minimum numbers in the array
-
-  function getMinMax(arr){
-    let maximum = Math.max(...arr);
-    let minimum = Math.min(...arr);
-   let result =  ([maximum, minimum]); 
-  
-  
-  getMinMax('109, 5, 9, 67, 8, 24')
 
 // b) Create the function that makes the test pass.
 
-//Pseudo Code:
-// Create a function named colors1
-// Return the result which will be the numbers in the array sorted by maximum and minimum
+//Psuedocode:
+// Create a function called minMax
+// THe function will take in an array of numbers
+// Find a built-in method that finds min and max numbers
+//Return the output of an array of min and max numbers in order
 
-const colors1 = (24, 27, 30, 33, 36) => {
-  return result;
-};
+const minMax = (array) => {
+  var minimum = Math.min(...array)
+  var maximum = Math.max(...array)
+  return result = [minimum, maximum]
+}
+
+// Got Green test passed
 
 // --------------------3) Create a function that takes in two arrays as arguments and returns one array with no duplicate values. STRETCH: Use the spread operator to pass in a dynamic number of arguments.
 
@@ -116,14 +110,14 @@ describe("noRepeatingValues", () => {
 })
 
 // Got Red.
-//  ● noRepeatingValues › takes in two arrays as arguments and returns one array with no duplicate values
+//  ● noDuplicates › takes in two arrays as arguments and returns one array with no duplicate values
 // ReferenceError: noDuplicates is not defined
 
 
 // b) Create the function that makes the test pass.
 
 // Pseudo Code:
-// Create a function named noRepeatingValues thats has a parameter of an array
+// Create a function named noDuplicates thats has a parameter of an array
 // Create a new variable that holds an empty array
 // Create a method that combines the arrays
 // Create a method to remove duplicates
@@ -138,4 +132,4 @@ const noDuplicates = (...array) => {
   return [...new Set(newArr)]
 }
 
-// Got Green. 
+// Got Green test passed
